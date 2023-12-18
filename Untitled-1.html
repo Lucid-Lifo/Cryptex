@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Encryption and Decryption</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <header>
+    <h1>CRYPTEX</h1> 
+    <div>
+      <button>Profile</button>
+      <button>History</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <section class="encryption">
+        <h2>Encryption</h2>
+        <div class="file-upload">
+          <p>Choose files to encrypt</p>
+          <label for="file-upload">
+            Drag & Drop or Browse files
+            <input type="file" id="file-upload" name="upload">
+          </label>
+        </div>
+        <div class="encrypt_algo_selection">
+          <p>Choose the encryption algorithm</p>
+          <input type="radio" id="aes256" name="encrypt_algo" value="AES 256">
+          <label for="AES 256">AES 256</label><br>
+          <input type="radio" id="rsa" name="encrypt_algo" value="RSA">
+          <label for="RSA">RSA</label><br>
+          <input type="radio" id="twofish" name="encrypt_algo" value="TwoFish">
+          <label for="TwoFish">TwoFish</label>
+
+
+        </div>
+        <div class="encrypt_password">
+          <label for="password">Enter a password:</label>
+          <input type="password" id="password">
+        </div>
+        <button>Encrypt files</button>
+      </section>
+      <main>
+        <section class="decrypt">
+          <h2>Decryption</h2>
+          <div class="file-upload">
+            <p>Choose files to Decrypt</p>
+            <label for="file-upload">
+              Drag & Drop or Browse files
+              <input type="file" id="file-upload" multiple>
+            </label>
+          </div>
+          <label for="files">Choose files to decrypt:</label>
+          <input type="file" id="files" multiple>
+          <div class="decrypt_algo_selection">
+            <p>Choose the Decryption algorithm</p>
+            <input type="radio" id="aes256" name="decrypt_algo" value="AES 256">
+            <label for="AES 256">AES 256</label><br>
+            <input type="radio" id="rsa" name="decrypt_algo" value="RSA">
+            <label for="RSA">RSA</label><br>
+            <input type="radio" id="twofish" name="decrypt_algo" value="TwoFish">
+            <label for="TwoFish">TwoFish</label>
+  
+  
+          </div>
+          <div>
+            <label for="password">Enter the decryption password:</label>
+            <input type="password" id="password">
+          </div>
+         
+          <div>
+          <button type="button" class="decrypt-button">Decrypt files</button>
+          </div>
+          
+        </section>
+      </main>
+    </main>
+  </div>
+</body>
+</html>

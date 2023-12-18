@@ -1,84 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Encryption and Decryption</title>
+
   <link rel="stylesheet" href="style1.css">
+  
+
 </head>
 <body>
-
   <header>
-    <h1>CRYPTEX</h1> 
+    <h1>CRYPTEX</h1>
     <div>
-      <button>Profile</button>
-      <button>History</button>
+      <button type="menu">Profile</button>
+      <a href="HIstory/history.html">
+      <button id="button" class="float-left submit-button" >History</button>
+      </a>
     </div>
   </header>
 
-  <div class="container">
-    <main>
-      <section class="encryption">
-        <h2>Encryption</h2>
-        <div class="file-upload">
-          <p>Choose files to encrypt</p>
-          <label for="file-upload">
-            Drag & Drop or Browse files
-            <input type="file" id="file-upload" name="upload">
-          </label>
-        </div>
-        <div class="encrypt_algo_selection">
-          <p>Choose the encryption algorithm</p>
-          <input type="radio" id="aes256" name="encrypt_algo" value="AES 256">
-          <label for="AES 256">AES 256</label><br>
-          <input type="radio" id="rsa" name="encrypt_algo" value="RSA">
-          <label for="RSA">RSA</label><br>
-          <input type="radio" id="twofish" name="encrypt_algo" value="TwoFish">
-          <label for="TwoFish">TwoFish</label>
+  <div class="tab">
 
-
-        </div>
-        <div class="encrypt_password">
-          <label for="password">Enter a password:</label>
-          <input type="password" id="password">
-        </div>
-        <button>Encrypt files</button>
-      </section>
+    <button class="tablink" onclick="openPage('Encryption', this, '#777')" id="defaultOpen">Encryption</button>
+    <button class="tablink" onclick="openPage('Decryption', this, '#777')">Decryption</button>
+  </div>
+  <div id="Encryption" class="tabcontent">
+    <div class="container">
       <main>
-        <section class="decrypt">
-          <h2>Decryption</h2>
+        <section class="encryption">
+          <h2>Encryption</h2>
           <div class="file-upload">
-            <p>Choose files to Decrypt</p>
+            <p>Choose files to encrypt</p>
             <label for="file-upload">
               Drag & Drop or Browse files
-              <input type="file" id="file-upload" multiple>
+              <input type="file" id="file-upload" name="encrypt_upload">
             </label>
           </div>
-          <label for="files">Choose files to decrypt:</label>
-          <input type="file" id="files" multiple>
-          <div class="decrypt_algo_selection">
-            <p>Choose the Decryption algorithm</p>
-            <input type="radio" id="aes256" name="decrypt_algo" value="AES 256">
+          <div class="encrypt_algo_selection">
+            <p>Choose the Encryption algorithm</p>
+            <input type="radio" id="aes256" name="encrypt_algo" value="AES 256">
             <label for="AES 256">AES 256</label><br>
-            <input type="radio" id="rsa" name="decrypt_algo" value="RSA">
+            <input type="radio" id="rsa" name="encrypt_algo" value="RSA">
             <label for="RSA">RSA</label><br>
-            <input type="radio" id="twofish" name="decrypt_algo" value="TwoFish">
+            <input type="radio" id="twofish" name="encrypt_algo" value="TwoFish">
             <label for="TwoFish">TwoFish</label>
-  
-  
           </div>
-          <div>
-            <label for="password">Enter the decryption password:</label>
+
+          <div class="encrypt_password">
+            <label for="password">Enter a password:</label>
             <input type="password" id="password">
           </div>
-         
-          <div>
-          <button type="button" class="decrypt-button">Decrypt files</button>
-          </div>
-          
+          <button id="encrypt_button">Encrypt files</button>
+          <div id="download_encrypt_popup" class="popup">
+            <div class="popup-content">
+                <h1 style="color:green;">
+                      Download File Below
+                  </h1>
+                <p>This is a popup box!</p>
+                <button id="download_encrypt_file">
+                      Download 
+                  </button>
+            </div>
+        </div>
+
+
         </section>
-      </main>
-    </main>
+    </div>
   </div>
+  </main>
+
+  <div id="Decryption" class="tabcontent">
+    <div class="container">
+      <main>
+        <section class="decryption">
+        <h2>Decryption</h2>
+        <div class="file-upload">
+          <p>Choose files to decrypt</p>
+          <label for="file-upload">
+            Drag & Drop or Browse files
+            <input type="file" id="file-upload" name="decrypt_upload">
+          </label>
+        </div>
+    
+        <input type="file" id="files" multiple>
+        <div class="decrypt_algo_selection">
+          <p>Choose the Decryption algorithm</p>
+          <input type="radio" id="aes256" name="decrypt_algo" value="AES 256">
+          <label for="AES 256">AES 256</label><br>
+          <input type="radio" id="rsa" name="decrypt_algo" value="RSA">
+          <label for="RSA">RSA</label><br>
+          <input type="radio" id="twofish" name="decrypt_algo" value="TwoFish">
+          <label for="TwoFish">TwoFish</label>
+        </div>
+        <div>
+          <label for="password">Enter the decryption password:</label>
+          <input type="password" id="password">
+        </div>
+
+        
+        <button id="decrypt_button" class="button">Decrypt files</button>
+        <div id="download_decrypt_popup" class="popup">
+          <div class="popup-content">
+              <h1 style="color:green;">
+                    Download !!!!
+                </h1>
+              <p>This is a popup box!</p>
+              <button id="download_decrypt_file">
+                    Download
+                </button>
+          </div>
+      </div>
+      </section>
+      </main>
+    </div>
+  </div>
+  <script src="unjs.js"></script>
 </body>
+
 </html>

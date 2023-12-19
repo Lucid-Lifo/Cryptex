@@ -50,7 +50,7 @@ body {
   section {
     padding: 25px;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px #b325dc;
+    box-shadow: 0px 0px 20px gray;
   }
   
   .file-upload {
@@ -91,18 +91,23 @@ body {
     border-radius: 5px;
     margin: 15px;
     cursor: pointer;
-    margin-top: 20px;
   }
-  
+  .history_btn{
+    background-color: #333;
+  }
+  .history_btn:hover{
+    background-color: #777;
+  }
   
   a {
     color: #333;
+
     text-decoration: none;
   }
 
 
 .tablink {
-  box-shadow: 0px 0px 20px #b325dc;
+  box-shadow: 0px 0px 20px gray;
   align-items: center;
   background-color: #333;
   color: white;
@@ -165,4 +170,61 @@ body {
 }
 .show {
   display: block;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #777;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  padding-left: 1050px;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: #777;
+  left: 60rem;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 12;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px 10px 10px;
+  width: fit-content;
+  display:block;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #cccaca;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.editbutton{
+  background-color: black;  
+  
+}
+.editbutton:hover{
+  background-color: #333;
 }

@@ -94,6 +94,7 @@ body {
   }
   .history_btn{
     background-color: #333;
+    box-shadow: 0px 0px 10px gray;
   }
   .history_btn:hover{
     background-color: #777;
@@ -176,6 +177,7 @@ body {
 /* Dropdown Button */
 .dropbtn {
   background-color: #333;
+  box-shadow: 0px 0px 10px gray;
   color: white;
   border: none;
   cursor: pointer;

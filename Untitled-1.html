@@ -17,16 +17,14 @@
     <div>
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Profile</button>
-        
         <div id="myDropdown" class="dropdown-content">
           <a href="#" style="margin: auto;">Profile Name</a>
           <a href="#"  style="margin: auto">jkhjythjhfhfh@gmail.com</a>
           <button  id="editbutton"onclick="" class="editbutton" >edit</button>
         </div>
       </div>
-    <a href="HIstory/history.html" style="background-color: black;">
+      <a href="HIstory/history.html" style="background-color: black;">
       <button id="button" class="history_btn" >History</button></a>
- 
     </div>
   </header>
 
@@ -35,7 +33,8 @@
     <button class="tablink" onclick="openPage('Encryption', this, '#777')" id="defaultOpen">Encryption</button>
     <button class="tablink" onclick="openPage('Decryption', this, '#777')">Decryption</button>
   </div>
-  <div id="Encryption" class="tabcontent">
+  <form action="#" method="post">
+    <div id="Encryption" class="tabcontent">
     <div class="container">
       <main>
         <section class="encryption">
@@ -47,6 +46,7 @@
               <input type="file" id="file-upload" name="encrypt_upload">
             </label>
           </div>
+          
           <div class="encrypt_algo_selection">
             <p>Choose the Encryption algorithm</p>
             <input type="radio" id="aes256" name="encrypt_algo" value="AES 256">
@@ -56,15 +56,16 @@
             <input type="radio" id="twofish" name="encrypt_algo" value="TwoFish">
             <label for="TwoFish">TwoFish</label>
           </div>
-
           <div class="encrypt_password">
             <label for="password">Enter a password:</label>
             <input type="password" id="password">
           </div>
           <button id="encrypt_button">Encrypt files</button>
+  </form>
           <div id="download_encrypt_popup" class="popup">
             <div class="popup-content">
-                <h1 style="color:green;">
+
+                <h1 style="color:darkgrey;">
                       Download File Below
                   </h1>
                 <p>This is a popup box!</p>
@@ -79,7 +80,7 @@
     </div>
   </div>
   </main>
-
+  <form action="" method="post">
   <div id="Decryption" class="tabcontent">
     <div class="container">
       <main>
@@ -108,17 +109,19 @@
           <input type="password" id="password">
         </div>
 
-        
+  </form>
+  <form action="#" method="post">
         <button id="decrypt_button" class="button">Decrypt files</button>
         <div id="download_decrypt_popup" class="popup">
           <div class="popup-content">
-              <h1 style="color:green;">
+              <h1 style="color:darkgray;">
                     Download !!!!
                 </h1>
               <p>This is a popup box!</p>
               <button id="download_decrypt_file">
                     Download
                 </button>
+   </form>
           </div>
       </div>
       </section>

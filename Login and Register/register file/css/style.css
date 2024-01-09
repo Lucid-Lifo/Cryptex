@@ -338,16 +338,7 @@ ul.list-login-bottom li:nth-child(2) {
 }
 
 
-.checkbox input+i:after,
-.radio input+i:after {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.1s;
-    -o-transition: opacity 0.1s;
-    -ms-transition: opacity 0.1s;
-    -moz-transition: opacity 0.1s;
-    -webkit-transition: opacity 0.1s;
-}
+
 
 /*/////////////// FORM STYLES ////////////////////*/
 
